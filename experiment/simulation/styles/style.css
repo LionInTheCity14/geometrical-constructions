@@ -1,0 +1,279 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.subject {
+    margin: auto auto auto 25px;
+}
+
+.label-div {
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+
+.top-container {
+    background-color: #f1f1f1;
+    padding: 5px 5px 5px 5px;
+ 
+}
+
+.header {
+    padding: 0;
+    padding: 10px 16px;
+    display: flex;
+    
+}
+
+.experiment-heading {
+    margin: 25px;
+}
+
+.middle-container{
+  position:absolute;
+	
+	left: 10px;
+    top: 40px;
+    height: 558px;
+    width: 788px;
+	/*left:10px;
+
+	top:50px;
+
+	height:530px;
+
+	width:785px;*/
+/*background-color: red;*/
+	background-color: #dce5ec;
+}
+
+.incanvas{
+  margin:10px 0 0 10px;
+
+	padding:0;
+}
+
+.circlebg
+
+{
+
+	border-radius:20%;
+	padding: 0px 2px 0px 2px;
+	font-size:20px;
+
+	color:#FFF;
+
+	text-align:center;
+
+	background: #2150a0;
+
+}
+#simscreen
+
+{
+
+	position: relative;
+
+	left:0px;
+
+	top:0px;
+
+	height: 600px; 
+
+	width:800px;
+
+	border:solid 1px;
+
+	background-color: #dce5ec;
+}
+
+#simscreen1
+
+{
+
+	position: relative;
+
+	left:0px;
+
+	top:0px;
+
+	height: 600px; 
+
+	width:800px;
+
+	border:solid 1px;
+
+	background-color: #dce5ec;
+}
+
+
+#title{
+
+	position:relative;
+
+	left: 0px;
+
+	top: -25px;
+
+	height:40px;
+
+	font-size: 20px;
+
+	text-align:center;
+
+	background-color: #1ec439;
+
+	font-family: verdana;
+
+	color: White;
+
+	text-transform: uppercase; 
+
+}
+button {
+    margin-left: 25px;
+    height: 30px;
+    width: 80px;
+    
+}
+
+.header-img {
+    margin: 0 0 0 auto;
+    height: 90px;
+
+}
+
+.header-img2 {
+    height: 90px;
+    margin: 0;
+
+}
+
+.content {
+    padding: 16px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky+.content {
+    padding-top: 102px;
+}
+
+h1 {
+    margin-top: 30px;
+    display: inline-block;
+    text-align: center;
+
+    margin: auto;
+}
+
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: black;
+    color: white;
+}
+
+.experiment {
+    margin: 15px;
+}
+
+#downloadButton{
+    text-decoration: none;
+}
+
+#downloadButton:hover{
+    background-color: bisque;
+}
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+  
+  
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+    margin-left: 50px;
+  }
+  a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+  }
+  
+  a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .previous {
+    background-color: #f1f1f1;
+    color: black;
+  }
+  
+  .next {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  .round {
+    border-radius: 50%;
+  }
+  
+  .button {
+  
+    margin-right: 25px;
+    height: 36px;
+    width: 70px;
+}
+.next{
+  position: relative;
+  left: 76%;
+  bottom: -165%;
+}
+
+.play{
+  position: relative;
+  left:26%;
+  bottom: -95%;
+  background-color: #dc260eed;
+  color: #f1f1f1;
+}
+
+.img-with-text {
+  text-align: justify;
+  width: [width of img];
+}
+
+.img-with-text img {
+  display: block;
+  margin: 0 auto;
+}
+
