@@ -15,9 +15,11 @@
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/loading.css" />
-    <script src="scripts/main.js" defer></script>
+    <!-- <script src="scripts/main.js" defer></script> -->
+    <script src="scripts/exp1.js" defer></script>
     <title>Geometrical contruction</title>
 </head>
+
 <body>
     <div class="header">
         <img class="header-img" src="images/header.png" alt="virtual-lab-logo" />
@@ -43,11 +45,28 @@
                         <!-- Main page -->
 
                         <div class="mainStep" id="mainStep" style="visibility: visible; z-index: 1000">
+                            <h4 style="position: absolute; left: 25px;">To divide a straight line AB of 140 mm into
+                                given number of equal parts say 5.</h4>
+                            <img style="position: absolute; left: 180px; top: 250px;"
+                                src="images/exp1Images/8-png-removebg-preview.png" alt="image of experiment">
 
+                            <button class="btn" id="start-btn" onclick="starter()">Start</button>
+                        </div>
+
+                        <div class="starter" id="starter" style="visibility: hidden; z-index: 1000">
+
+                            <img id="starter-drawingBoard" class="board" src="images/drawing board.png" alt="picture" width="375"height="245">
+
+                            <img id="starter-drawingSheet" class="board" src="images/small sheet.png" alt="picture" width="350" height="220" style=" animation: move 1s infinite; animation-play-state: paused; animation-fill-mode: forwards;" onclick="move()">
+
+                            <img src="images/exp1Images/1-gif.gif" alt="starter-gif" id="starter-gif" class="board">
+
+                            <!-- <button class="btn" onclick="moveSheet()">Start</button> -->
                         </div>
                     </div>
                 </td>
             </tr>
         </table>
     </body>
+
 </html>
