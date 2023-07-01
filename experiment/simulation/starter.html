@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/Loading.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;family=Raleway&amp;display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+    <title>Engineering Drawing- Virtual Lab</title>
+    <style>
+        #png {
+            position: absolute;
+            margin-left: 24px;
+            margin-top: 174px;
+
+        }
+
+        #png1 {
+            position: relative;
+            margin-left: 410px;
+            margin-top: -51px;
+
+        }
+
+        #png2 {
+            position: relative;
+            margin-left: 37px;
+            margin-top: 17px;
+
+        }
+
+        #png3 {
+            position: relative;
+            margin-left: -147px;
+            margin-top: -480px;
+
+        }
+
+        #png4 {
+            position: relative;
+            margin-left: 94px;
+            margin-top: -480px;
+
+        }
+
+        #png5 {
+            position: relative;
+            margin-left: 549px;
+            margin-top: -700px;
+
+        }
+
+        #png6 {
+            position: relative;
+            margin-left: 583px;
+            margin-top: -707px;
+        }
+
+        #png7 {
+            position: relative;
+            margin-left: 618px;
+            margin-top: -709px;
+
+        }
+
+        #png8 {
+            position: relative;
+            margin-left: -678px;
+            margin-top: -641px;
+        }
+
+        #png9 {
+            position: relative;
+            margin-left: 305px;
+            margin-top: -641px;
+        }
+
+        #png10 {
+            position: relative;
+            margin-left: -346px;
+            margin-top: -56px;
+        }
+
+        #png11 {
+            position: relative;
+            margin-left: 305px;
+            margin-top: -56px;
+        }
+
+        #png12 {
+            position: relative;
+            margin-left: -332px;
+            margin-top: -954px;
+        }
+
+        #png13 {
+            position: relative;
+            margin-left: 518px;
+            margin-top: -467px;
+        }
+
+        #png14 {
+            position: relative;
+            margin-left: -9px;
+            margin-top: -554px;
+
+        }
+
+
+
+
+
+        /* animation part */
+        @keyframes move {
+            0% {
+                transform: translate(0, 0);
+
+            }
+
+            100% {
+                transform: translate(-375px, 235px);
+
+
+            }
+        }
+
+        @keyframes moveclip {
+
+            0% {
+                top: 0px;
+            }
+
+            100% {
+                top: 35px;
+            }
+        }
+
+        @keyframes moveclip1 {
+
+            0% {
+                bottom: 0px;
+            }
+
+            100% {
+                bottom: 32px;
+            }
+        }
+    </style>
+    <script src="scripts/starter.js" defer></script>
+</head>
+
+<body>
+    <div class="header">
+        <img class="header-img" src="images/header.png" alt="virtual-lab-logo">
+        <h2 class="subject">Virtual Lab</h2>
+        <img class="header-img2" src="images/dei.jpg" alt="dei-logo">
+
+    </div>
+
+    <div class="topnav" id="myHeader">
+        <a class="active" href="#home"></a>
+        <a href="#news"></a>
+        <a href="#about"></a>
+    </div>
+
+    <body style="margin:0; font-family: verdana; color: #000;">
+        <table align="center">
+            <tr>
+                <td>
+                    <div id="simscreen">
+                        <div id="title">
+                            <h3>Projection Of Straight Lines</h3>
+                        </div>
+                        <div class="middle-container" id="canvas1">
+
+                            <strong class="incanvas" style="position: absolute; top: 20px; left: 0px;">STEP</strong>
+
+                            <span class="circlebg"
+                                style="position: absolute; top: 27px; left: 55px;">&nbsp;1&nbsp;</span></br>
+
+                            <span style="position: absolute; left:83px; top: 30px; "><i class="fa fa-hand-o-right"
+                                    aria-hidden="true"></i>&nbsp;Setup your drawing table</span>
+
+                            <span id="wr" style="visibility: visible; position: relative; left:80px; top: 35px; "><i
+                                    class="fa fa-hand-o-right" aria-hidden="true"></i>&nbsp;Place drawing sheet</span>
+                            <span id="wr1" style="position: relative; left: -90px; top: 35px; visibility: hidden; "><i
+                                    class="fa fa-hand-o-right" aria-hidden="true"></i>&nbsp;Click on clips and mini
+                                drafter to place them</span>
+
+                            <div class="sub-header" style="position: relative; margin-top:  2rem;">
+
+                                <input type="button" id="next"
+                                    style="visibility: hidden;position:absolute; left:662px; top:389px; cursor:pointer; font-size: 15px; background-color: #2150a0; padding-top: 5px; color: #FFF; padding-bottom: 5px"
+                                    value="&nbsp;Next Step&nbsp;" onclick="parent.location='Step5.html'" />
+
+                                <img id="png" class="board" src="images/drawing board.png" alt="picture" width="375"
+                                    height="245">
+                                <img id="png1" class="board" src="images/small sheet.png" alt="picture" width="350"
+                                    height="220" style=" animation: move 1s infinite; animation-play-state: paused; animation-fill-mode: forwards;
+                                    " onclick="move()">
+                                <img id="png2" class="board" src="images/sheet.png" alt="picture" width="350"
+                                    height="220" style="visibility: hidden;">
+                                <!-- <img id="png3" class="board" src="images/arrow.gif" alt="picture" width="170"
+                                    height="70" style="visibility: visible;"> -->
+                                <img id="png4" class="board" src="images/3D Clips.png" alt="picture" width="96"
+                                    height="80" style="visibility: hidden;" onclick="clipmove()">
+                                <img id="png5" class="board" src="images/3D Clips.png" alt="picture" width="96"
+                                    height="80" style="visibility: hidden;" onclick="clipmove1()">
+                                <img id="png6" class="board" src="images/3D Clips.png" alt="picture" width="96"
+                                    height="80" style="visibility: hidden;" onclick="clipmove2()">
+                                <img id="png7" class="board" src="images/3D Clips.png" alt="picture" width="96"
+                                    height="80" style="visibility: hidden;" onclick="clipmove3()">
+                                <img id="png8" class="board" src="images/clips.png" alt="picture" width="15" height="25"
+                                    style="visibility: hidden;animation: moveclip 1s infinite; animation-play-state: paused; animation-fill-mode: forwards;">
+                                <img id="png9" class="board" src="images/clips.png" alt="picture" width="15" height="25"
+                                    style="visibility: hidden;animation: moveclip 1s infinite; animation-play-state: paused; animation-fill-mode: forwards;">
+                                <img id="png10" class="board" src="images/cclip.png" alt="picture" width="15"
+                                    height="25"
+                                    style="visibility: hidden;animation: moveclip1 1s infinite; animation-play-state: paused; animation-fill-mode: forwards;">
+                                <img id="png11" class="board" src="images/cclip.png" alt="picture" width="15"
+                                    height="25"
+                                    style="visibility: hidden;animation: moveclip1 1s infinite; animation-play-state: paused; animation-fill-mode: forwards;">
+                                <!-- <img id="png12" class="board" src="images/arrow.gif" alt="picture" width="30"
+                                    height="30" style="visibility: visible;"> -->
+                                <img id="png13" class="board" src="images/drafter.png" alt="picture" width="200"
+                                    height="200" style="visibility: hidden;" onclick="draftermove()">
+                                <img id="png14" class="board" src="images/DRAFTER1.png" alt="picture" width="200"
+                                    height="200"
+                                    style="visibility: hidden;animation: moveclip 1s infinite; animation-play-state: paused; animation-fill-mode: forwards;">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+
+
+                    <div class="bottom-container">
+
+                    </div>
+
+    </body>
+
+</html>
