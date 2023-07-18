@@ -21,7 +21,7 @@ main{
     margin: 0px;
     padding: 5px;
     letter-spacing: .1em;
-    background-color: rgba(30,196,57,255);
+    background-color: rgb(20, 117, 228);
     color: white;
     display: flex;
     justify-content: center;
@@ -33,10 +33,15 @@ main{
 }
 
 .instruments-img{
-    visibility: visible;
     position: absolute;
     width: 600px;
     left: 0px;
+    top: 200px;
+}
+
+.exp-index-img{
+    position: absolute;
+    left: 180px;
     top: 200px;
 }
 
@@ -50,11 +55,21 @@ main{
     position: absolute;
     top: 70px;
     left: 30px;
+    width: 500px;
+}
+
+.container-of-list{
+    position: absolute;
+    text-decoration: none;
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    width: 700px;
+    font-size: 20px;
 }
 
 .next{
     position: absolute;
-    visibility: visible;
     left: 720px;
     top: 500px;
     padding: 10px 15px;

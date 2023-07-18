@@ -1,134 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;family=Raleway&amp;display=swap"
-        rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;family=Raleway&amp;display=swap"
+      rel="stylesheet"
+    />
     <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/main-content.css" />
+    <script src="scripts/index.js" defer></script>
+    <title>Geometrical Construction</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-img">
+        <img src="images/header.png" alt="virtual-lab-logo" class="vlab-logo" />
+        <h1>Virtual labs</h1>
+        <img src="images/dei.jpg" alt="dei-logo" class="dei-logo" />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Experiments</a></li>
+          <li><a href="#">Contact us</a></li>
+          <!-- <li><a href="#"></a></li> -->
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="simulation-container">
+        <h2 class="title">GEOMETRICAL CONTRUCTION</h2>
+        
+        <!-- mainPage  -->
+        <div class="content-container" id="mainPage" style="visibility: visible;">
+            <h3 class="instruction" style>Objective:</h3>
 
-    <link rel="stylesheet" href="styles/style.css" />
-    <link rel="stylesheet" href="styles/main.css" />
-    <link rel="stylesheet" href="styles/loading.css" />
-    <script src="scripts/main.js" defer></script>
-    <title>Geometrical contruction</title>
-</head>
+            <p class="content" id="content">content</p>
 
-<body>
-    <div class="header">
-        <img class="header-img" src="images/header.png" alt="virtual-lab-logo" />
-        <h2 class="subject">Virtual Lab</h2>
-        <img class="header-img2" src="images/dei.jpg" alt="dei-logo" />
-    </div>
+            <h3 class="instruction" style="top: 100px">Instruments used:</h3>
 
-    <div class="topnav" id="myHeader">
-        <a class="active" href="#home"></a>
-        <a href="#news"></a>
-        <a href="#about"></a>
-    </div>
+            <img class="instruments-img" id="instruments-img-1" style="visibility: visible;" src="images/instruments.png" alt="Instruments"/>
 
-    <body style="margin: 0; font-family: verdana; color: #000">
-        <table style="align-items: center" align="center">
-            <tr>
-                <td>
-                    <div id="simscreen">
-                        <div id="title">
-                            <h3>Geometrical contruction</h3>
-                        </div>
+            <button style="position: absolute; visibility: visible;" class="next" id="next-1" onclick="indexPage()">Next</button>
+        </div>
 
-                        <!-- Main page -->
+        <div class="content-container" id="indexPage" style="visibility: hidden;">
+            <h3 class="instruction" style="font-size: 25px;">Choose any of the following experiments</h3>
+            
+            <div class="container-of-list">
+              <ol class="list">
+                <li class="list-item" style="margin-bottom: 20px;"><a class="list-link" href="./exp1.html">To divide a straight line AB of 140 mm into given number of equal parts say 5.</a></li>
 
-                        <div class="mainStep" id="mainStep" style="visibility: visible; z-index: 1000">
-                            <!-- <strong class="incanvas" style="position: absolute; top: 20px; left: 0px">STEP</strong>
+                <li class="list-item" style="margin-bottom: 20px;"><a class="list-link" href=".exp2.html">To inscribe a regular pentagon in a given circle of diameter (say 150mm).</a></li>
 
-                            <span class="circlebg"
-                                style="position: absolute; top: 28px; left: 57px">&nbsp;1&nbsp;</span><br /> -->
+                <li class="list-item" style="margin-bottom: 20px;"><a class="list-link" href="./exp3.html">To construct a regular hexagon, with the given side (say 70mm).</a></li>
 
-                            <p class="incanvas" style="
-                                position: absolute;
-                                top: 55px;
-                                left: 0px;
-                                font-size: 15px;
-                                ">
-                                <strong>Objective:</strong>
-                            </p>
+                <li class="list-item" style="margin-bottom: 20px;" ><a class="list-link" href="./exp4.html">To draw in a given equilateral triangle of sides say 100 mm, 3 equal circles, each touching two sides and other two circles.</a></li>
+              </ol>
+            </div>
+        </div>
 
-                            <p class="incanvas" style="position: absolute; top: 85px; left: 0px; font: 15px">
-                                content
-                            </p>
-
-                            <p class="incanvas" style="
-                                position: absolute;
-                                top: 115px;
-                                left: 0px;
-                                font-size: 14px;
-                                ">
-                                <strong>Appratus used:</strong>
-                            </p>
-
-                            <p class="incanvas" style="
-                            position: absolute;
-                            top: 145px;
-                            left: 0px;
-                            font-size: 15px;
-                            ">
-                                content
-                            </p>
-
-                            <img src="images/instruments.png" alt="" width="550px" height="330px"
-                                style="padding-left: 7%; margin-top: 200px" />
-
-                            <!-- NEXT BUTTON  -->
-
-                            <input type="button" id="next-to-index" style="
-                                visibility: visible;
-                                position: absolute;
-                                left: 662px;
-                                top: 450px;
-                                cursor: pointer;
-                                font-size: 15px;
-                                background-color: #2150a0;
-                                padding-top: 5px;
-                                padding-bottom: 5px;
-                                color: #fff;
-                                " value="&nbsp;Start Here&nbsp;" onclick="indexPage()" />
-                        </div>
-
-                        <!-- index page  -->
-
-                        <div class="indexPage" id="indexPage" style="visibility: hidden; z-index: 1000">
-                            <span style="position: absolute; left:40px; top: 90px; color:black; font-size: 1.3rem; font-weight: bold;"><i class="fa fa-hand-o-right" aria-hidden="true"></i>&nbsp;Choose any of the following Experiment</span><br><br>
-
-                            <div class="sub-header" style="position: relative; margin-top: -500px;">
-
-                                <div class="middle1" style="position: absolute; margin-left: 60px; margin-top: 20px;">
-                                    <!-- <p>Choose the problem Statement</p> -->
-                                    <ul>
-                                        <li>
-                                            <a href="exp1.html">Experiment 1</a>
-                                        </li>
-                                        <li>
-                                            <a href="exp2.html">Experiment 2</a>
-                                            </li>
-                                        <li>
-                                            <a href="exp3.html">Experiment 3</a>
-                                        </li>
-                                        <li>
-                                            <a href="exp4.html">Experiment 4</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-        </table>
-    </body>
-
+      </div>
+    </main>
+  </body>
 </html>

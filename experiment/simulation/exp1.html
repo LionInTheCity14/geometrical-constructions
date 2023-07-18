@@ -1,172 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;family=Raleway&amp;display=swap"
-        rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;family=Raleway&amp;display=swap"
+      rel="stylesheet"
+    />
     <link rel="icon" href="favicon.ico" />
-
-    <link rel="stylesheet" href="styles/style.css" />
-    <link rel="stylesheet" href="styles/main.css" />
-    <link rel="stylesheet" href="styles/loading.css" />
-    <!-- <script src="scripts/main.js" defer></script> -->
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/main-content.css" />
+    <link rel="stylesheet" href="styles/starter.css">
     <script src="scripts/exp1.js" defer></script>
-    <title>Geometrical contruction</title>
-</head>
+    <title>Experiment 1</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-img">
+        <img src="images/header.png" alt="virtual-lab-logo" class="vlab-logo" />
+        <h1>Virtual labs</h1>
+        <img src="images/dei.jpg" alt="dei-logo" class="dei-logo" />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Experiments</a></li>
+          <li><a href="#">Contact us</a></li>
+          <!-- <li><a href="#"></a></li> -->
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="simulation-container">
+        <h2 class="title">GEOMETRICAL CONTRUCTION</h2>
+        
+        <!-- mainPage  -->
+        <div class="content-container" id="mainPage" style="visibility: hidden;">
+            <h3 class="instruction" style>Objective:</h3>
 
-<body>
-    <div class="header">
-        <img class="header-img" src="images/header.png" alt="virtual-lab-logo" />
-        <h2 class="subject">Virtual Lab</h2>
-        <img class="header-img2" src="images/dei.jpg" alt="dei-logo" />
+            <p class="content" id="content">To divide a straight line of 140 mm into given number of equal parts say 5.</p>
+
+            <!-- <h3 class="instruction" style="top: 100px">Instruments used:</h3> -->
+
+            <img class="exp-index-img" id="exp-index-img" src="images/exp1Images/8-png-removebg-preview.png" alt="Instruments"/>
+
+            <button style="position: absolute;" class="next" id="nextBtnStep1" onclick="nextToStep1()">Next</button>
+        </div>
+
+      <!-- STEP 1 -->
+
+      <div class="content-container" id="step3" style="visibility: visible;">
+
+        <!-- IMAGES  -->
+
+        <img class="instruments-img" id="step1-png1" 
+        style="visibility: visible;"
+        src="images/exp1Images/step1-png1.png" alt="img-1">
+
+        <!-- GIFS -->
+
+        <img class="instruments-img" id="step1-gif1" 
+        style="visibility: hidden;"
+        src="images/exp1Images/step1-gif1.gif" alt="gif-1">
+
+        <!-- TRANSBOXS -->
+
+        <img src="images/transbox.png"
+        id="step1-trans1"
+        style="visibility: visible; position: absolute; top: 215px; left: 460px; width: 120px; height: 85px;" alt="transbox" onclick="step1MoveSheet1()">
+
+        <!-- ARROW  -->
+
+        <img src="images/arrow left.gif"
+        id="step1-arr1"
+        style="visibility: visible; position: absolute; top: 230px; left: 580px; width: 50px; height: 40px;" alt="arr">
+
+        <button style="position: absolute; visibility: hidden;" class="next" id="nextBtnStep3" onclick="nextToStep2()">Next</button>
+      </div>
+
+      <!-- STEP 3  -->
+        <div class="content-container" id="step3" style="visibility: hidden;">
+
+          <img src="images/exp1Images/7-png.png" alt="img-1">
+
+          <button style="position: absolute; visibility: hidden;" class="next" id="nextBtnStep3" onclick="nextToStep4()">Next</button>
+        </div>
+
     </div>
-
-    <div class="topnav" id="myHeader">
-        <a class="active" href="#home"></a>
-        <a href="#news"></a>
-        <a href="#about"></a>
-    </div>
-
-    <body style="margin: 0; font-family: verdana; color: #000">
-        <table style="align-items: center" align="center">
-            <tr>
-                <td>
-                    <div id="simscreen">
-                        <div id="title">
-                            <h3>Geometrical contruction : Experiment 1</h3>
-                        </div>
-
-                        <!-- Main page -->
-
-                        <div class="mainStep" id="mainStep" style="visibility: visible; z-index: 998">
-                            <strong class="incanvas" style="position: absolute; top: 42px; left: 0px">STEP</strong>
-
-                            <span class="circlebg"
-                                style="position: absolute; top: 50px; left: 57px">&nbsp;1&nbsp;</span>
-
-                            <span style="position: absolute; left: 85px; top: 50px"><i class="fa fa-hand-o-right"
-                                    aria-hidden="true">&nbsp;To divide a straight line AB of 140 mm into given number of equal parts say 5.&nbsp;</i></span>
-
-                            <!-- IMAGES  -->
-
-                            <img src="images/exp1Images/8-png-removebg-preview.png"
-                                alt="there will be a picture same as GIF (starting point) played" class="board"
-                                id="png1-mainStep" style="visibility: visible; position: absolute; margin-left: 180px; margin-top: 180px;" />
-
-                            <!-- NEXT BUTTON  -->
-
-                            <input type="button" id="next-to-step1"
-                                style=" visibility: visible; position: absolute; left: 662px; top: 450px; cursor: pointer; font-size: 15px; background-color: #2150a0; padding-top: 5px; padding-bottom: 5px; color: #fff; "
-                                value="&nbsp;Next&nbsp;" onclick="step1()" />
-
-                            <!-- STEP 1  -->
-
-                            <div class="step1" id="step1" style="visibility: hidden; z-index: 998">
-
-                                <strong class="incanvas" style="position: absolute; top: 42px; left: 0px">STEP</strong>
-
-                                <span class="circlebg"
-                                    style="position: absolute; top: 50px; left: 57px">&nbsp;1&nbsp;</span>
-
-                                <span style="position: absolute; left: 85px; top: 50px"><i class="fa fa-hand-o-right"
-                                        aria-hidden="true">&nbsp;Content.&nbsp;</i></span>
-
-                                <!-- IMAGES  -->
-
-                                <img src="images/drawing board.png"
-                                    alt="there will be a picture same as GIF (starting point) played" class="board"
-                                    id="png1-step1" width="375" height="245"
-                                    style="visibility: hidden; position: absolute; margin-left: 120px; margin-top: 230px;" />
-
-                                <img src="images/small sheet.png"
-                                    alt="there will be a picture same as GIF (starting point) played" class="board"
-                                    id="png2-step1" 
-                                    width="350"
-                                    height="220" style=" animation: move 1s infinite; animation-play-state: paused; animation-fill-mode: forwards;">
-                                    <!-- width="120" height="100"
-                                    style="visibility: hidden; position: absolute; margin-left: 520px; margin-top: 170px;" /> -->
-
-                                <!-- GIFS  -->
-
-                                <img src="images/exp1Images/1-gif.gif" alt="GIF 1" class="board" id="gif1-step1"
-                                    width="605" height="385"
-                                    style="visibility: hidden; position: absolute; margin-left: 70px; margin-top: 150px;" />
-
-                                <!-- ARROWS  -->
-
-                                <img id="arr1-step1" class="board" src="images/arrow left.gif" alt="picture" width="85"
-                                    height="50"
-                                    style=" visibility: hidden; position: absolute; margin-left: 630px; margin-top: 180px">
-
-                                <!-- TRANSBOXES  -->
-
-                                <img id="trans1-step1" class="board" src="images/transbox.png" alt="picture" width="120"
-                                    height="100" style=" visibility: hidden; background-color: none; position: absolute; margin-left: 520px; margin-top: 170px; 
-                                /* border: 1px solid red;  */
-                                " onclick="moveSheet()" />
-
-                                <!-- NEXT BUTTON  -->
-
-                                <input type="button" id="next-to-step4"
-                                    style=" visibility: hidden; position: absolute; left: 662px; top: 450px; cursor: pointer; font-size: 15px; background-color: #2150a0; padding-top: 5px; padding-bottom: 5px; color: #fff; "
-                                    value="&nbsp;Next&nbsp;" onclick="step2()" />
-                            </div>
-
-                            <!-- STEP 2 -->
-
-                            <!-- <div class="mainstep" id="step1" style="visibility: visible; z-index: 998">
-                            <strong class="incanvas" style="position: absolute; top: 30px; left: 0px">STEP</strong>
-
-                            <span class="circlebg"
-                                style="position: absolute; top: 38px; left: 57px">&nbsp;1&nbsp;</span>
-
-                            <span style="position: absolute; left: 85px; top: 38px"><i class="fa fa-hand-o-right"
-                                    aria-hidden="true">&nbsp;Content.&nbsp;</i></span>
-
-                            IMAGES 
-
-                            <img src="images/drawing board.png"
-                                alt="there will be a picture same as GIF (starting point) played" class="board"
-                                id="png1-step1" width="605" height="385"
-                                style="visibility: hidden; position: absolute; margin-left: 70px; margin-top: 150px;" />
-
-                            <img src="images/small sheet.png"
-                                alt="there will be a picture same as GIF (starting point) played" class="board"
-                                id="png2-step1" width="605" height="385"
-                                style="visibility: hidden; position: absolute; margin-left: 70px; margin-top: 150px;" />
-
-                            GIFS 
-
-
-                            ARROWS 
-
-                            <img id="arr1-step3" class="board" src="images/arrow left.gif" alt="picture" width="85"
-                                height="50"
-                                style=" visibility: hidden; position: absolute; margin-left: 41rem; margin-top: 200px;" />
-
-                            TRANSBOXES 
-
-                            <img id="trans1-step3" class="board" src="images/transbox.png" alt="picture" width="100"
-                                height="120"
-                                style=" visibility: hidden; background-color: none; position: absolute; margin-left: 550px; margin-top: 175px; /* border: 1px solid red; */ "
-                                onclick="moveSheet()" />
-
-                            NEXT BUTTON 
-
-                            <input type="button" id="next-to-step4"
-                                style=" visibility: hidden; position: absolute; left: 662px; top: 450px; cursor: pointer; font-size: 15px; background-color: #2150a0; padding-top: 5px; padding-bottom: 5px; color: #fff; "
-                                value="&nbsp;Next&nbsp;" onclick="step2()" />
-                        </div> -->
-                        </div>
-                </td>
-            </tr>
-        </table>
-    </body>
-
+</main>
+</body>
 </html>
