@@ -1,102 +1,80 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;family=Raleway&amp;display=swap"
+      rel="stylesheet"
+    /> -->
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/main-content.css" />
+    <link rel="stylesheet" href="css/starter.css">
+    <script src="js/starter.js" defer></script>
+    <title>Experiment 1</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-img">
+        <img src="images/header.png" alt="virtual-lab-logo" class="vlab-logo" />
+        <h1>Virtual labs</h1>
+        <img src="images/dei.jpg" alt="dei-logo" class="dei-logo" />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Experiments</a></li>
+          <li><a href="#">Contact us</a></li>
+          <!-- <li><a href="#"></a></li> -->
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="simulation-container">
+        <h2 class="title">GEOMETRICAL CONTRUCTION</h2>
+        
+        <!-- mainPage  -->
+        <div class="content-container" id="mainPage" style="visibility: visible;">
+            <h3 class="instruction" style>Step1:</h3>
 
-<head>
-    <meta charset="utf-8">
+            <p class="content" id="content">Place the sheet on the drawing board.</p>
 
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/main-content.css">
-    <link rel="stylesheet" href="styles/starter.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;family=Raleway&amp;display=swap"
-        rel="stylesheet">
-    <link rel="icon" href="favicon.ico">
-    <title>Engineering Drawing- Virtual Lab</title>
-    <script src="scripts/starter.js" defer></script>
-</head>
+            <img class="instruments-img" id="png1-starter"
+            src="images/starterImages/starter-png.png" alt="board-image">
 
-<body>
-    <body style="margin:0; font-family: verdana; color: #000;">
-        <table align="center">
-            <tr>
-                <td>
-                    <div id="simscreen">
-                        <!-- <div id="title">
-                            <h3>Projection Of Straight Lines</h3>
-                        </div> -->
-                        <div class="middle-container" id="canvas1">
+            <img class="instruments-img" id="gif1-starter" src="images/starterImages/starter-moving-sheet.gif" alt="gif">
 
-                            <strong class="incanvas" style="position: absolute; top: 20px; left: 0px;">STEP</strong>
+            <img class="transbox" id="trans1-starter" src="images/transbox.png" alt="transbox">
 
-                            <span class="circlebg"
-                                style="position: absolute; top: 27px; left: 55px;">&nbsp;1&nbsp;</span></br>
+            <!-- Before Animation  -->
 
-                            <span style="position: absolute; left:83px; top: 30px; "><i class="fa fa-hand-o-right"
-                                    aria-hidden="true"></i>&nbsp;Setup your drawing table</span>
+            <img class="clips-3d-starter" id="clip1-3d-starter" src="images/starterImages/3d-clips.png" alt="3d-clips">
 
-                            <span id="wr" style="visibility: visible; position: relative; left:80px; top: 35px; "><i
-                                    class="fa fa-hand-o-right" aria-hidden="true"></i>&nbsp;Place drawing sheet</span>
-                            <span id="wr1" style="position: relative; left: -90px; top: 35px; visibility: hidden; "><i
-                                    class="fa fa-hand-o-right" aria-hidden="true"></i>&nbsp;Click on clips and mini
-                                drafter to place them</span>
+            <img class="clips-3d-starter" id="clip2-3d-starter" src="images/starterImages/3d-clips.png" alt="3d-clips">
 
-                            <div class="sub-header" style="position: relative; margin-top:  2rem;">
+            <img class="clips-3d-starter" id="clip3-3d-starter" src="images/starterImages/3d-clips.png" alt="3d-clips">
 
-                                <input type="button" id="next"
-                                    style="visibility: hidden;position:absolute; left:662px; top:389px; cursor:pointer; font-size: 15px; background-color: #2150a0; padding-top: 5px; color: #FFF; padding-bottom: 5px"
-                                    value="&nbsp;Next Step&nbsp;" onclick="parent.location='Step5.html'" />
+            <img class="clips-3d-starter" id="clip4-3d-starter" src="images/starterImages/3d-clips.png" alt="3d-clips">
 
-                                <img id="png" class="board" src="images/drawing board.png" alt="picture" width="375"
-                                    height="245">
-                                <img id="png1" class="board" src="images/small sheet.png" alt="picture" width="350"
-                                    height="220" style=" animation: move 1s infinite; animation-play-state: paused; animation-fill-mode: forwards;
-                                    " onclick="move()">
-                                <img id="png2" class="board" src="images/sheet.png" alt="picture" width="350"
-                                    height="220" style="visibility: hidden;">
-                                <!-- <img id="png3" class="board" src="images/arrow.gif" alt="picture" width="170"
-                                    height="70" style="visibility: visible;"> -->
-                                <img id="png4" class="board" src="images/3D Clips.png" alt="picture" width="96"
-                                    height="80" style="visibility: hidden;" onclick="clipmove()">
-                                <img id="png5" class="board" src="images/3D Clips.png" alt="picture" width="96"
-                                    height="80" style="visibility: hidden;" onclick="clipmove1()">
-                                <img id="png6" class="board" src="images/3D Clips.png" alt="picture" width="96"
-                                    height="80" style="visibility: hidden;" onclick="clipmove2()">
-                                <img id="png7" class="board" src="images/3D Clips.png" alt="picture" width="96"
-                                    height="80" style="visibility: hidden;" onclick="clipmove3()">
-                                <img id="png8" class="board" src="images/clips.png" alt="picture" width="15" height="25"
-                                    style="visibility: hidden;animation: moveclip 1s infinite; animation-play-state: paused; animation-fill-mode: forwards;">
-                                <img id="png9" class="board" src="images/clips.png" alt="picture" width="15" height="25"
-                                    style="visibility: hidden;animation: moveclip 1s infinite; animation-play-state: paused; animation-fill-mode: forwards;">
-                                <img id="png10" class="board" src="images/cclip.png" alt="picture" width="15"
-                                    height="25"
-                                    style="visibility: hidden;animation: moveclip1 1s infinite; animation-play-state: paused; animation-fill-mode: forwards;">
-                                <img id="png11" class="board" src="images/cclip.png" alt="picture" width="15"
-                                    height="25"
-                                    style="visibility: hidden;animation: moveclip1 1s infinite; animation-play-state: paused; animation-fill-mode: forwards;">
-                                <!-- <img id="png12" class="board" src="images/arrow.gif" alt="picture" width="30"
-                                    height="30" style="visibility: visible;"> -->
-                                <img id="png13" class="board" src="images/drafter.png" alt="picture" width="200"
-                                    height="200" style="visibility: hidden;" onclick="draftermove()">
-                                <img id="png14" class="board" src="images/DRAFTER1.png" alt="picture" width="200"
-                                    height="200"
-                                    style="visibility: hidden;animation: moveclip 1s infinite; animation-play-state: paused; animation-fill-mode: forwards;">
-                            </div>
-                        </div>
-                    </div>
+            <img class="drafter1-starter" id="drafter1-starter" src="images/starterImages/drafter.png" alt="drafter">
 
+            <!-- After Animation -->
 
-                    </div>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
+            <img class="clips-normal-starter" id="clip1-starter" src="images/starterImages/downClips.png" alt="Normal-clips">
 
+            <img class="clips-normal-starter" id="clip2-starter" src="images/starterImages/downClips.png" alt="Normal-clips">
 
-                    <div class="bottom-container">
+            <img class="clips-normal-starter" id="clip3-starter" src="images/starterImages/upClips.png" alt="Normal-clips">
 
-                    </div>
+            <img class="clips-normal-starter" id="clip4-starter" src="images/starterImages/upClips.png" alt="Normal-clips">
 
-    </body>
+            <img class="drafter2-starter" id="drafter2-starter" src="images/starterImages/DRAFTER1.png" alt="drafter2">
 
+            <button class="next" id="nextBtnOfStarter">Next</button>
+        </div>
+
+    </div>
+</main>
+</body>
 </html>

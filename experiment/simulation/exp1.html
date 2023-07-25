@@ -8,10 +8,9 @@
       rel="stylesheet"
     />
     <link rel="icon" href="favicon.ico" />
-    <link rel="stylesheet" href="styles/header.css" />
-    <link rel="stylesheet" href="styles/main-content.css" />
-    <link rel="stylesheet" href="styles/starter.css">
-    <script src="scripts/exp1.js" defer></script>
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/main-content.css" />
+    <script src="js/exp1.js" defer></script>
     <title>Experiment 1</title>
   </head>
   <body>
@@ -35,7 +34,7 @@
         <h2 class="title">GEOMETRICAL CONTRUCTION</h2>
         
         <!-- mainPage  -->
-        <div class="content-container" id="mainPage" style="visibility: hidden;">
+        <div class="content-container" id="mainPage" style="visibility: visible;">
             <h3 class="instruction" style>Objective:</h3>
 
             <p class="content" id="content">To divide a straight line of 140 mm into given number of equal parts say 5.</p>
@@ -44,17 +43,17 @@
 
             <img class="exp-index-img" id="exp-index-img" src="images/exp1Images/8-png-removebg-preview.png" alt="Instruments"/>
 
-            <button style="position: absolute;" class="next" id="nextBtnStep1" onclick="nextToStep1()">Next</button>
+            <button style="position: absolute;" class="next" id="nextBtnStep1" onclick="nextToStarterPage(exp1)">Next</button>
         </div>
 
       <!-- STEP 1 -->
 
-      <div class="content-container" id="step3" style="visibility: visible;">
+      <div class="content-container" id="step1" style="visibility: hidden;">
 
         <!-- IMAGES  -->
 
         <img class="instruments-img" id="step1-png1" 
-        style="visibility: visible;"
+        style="visibility: hidden;"
         src="images/exp1Images/step1-png1.png" alt="img-1">
 
         <!-- GIFS -->
@@ -67,13 +66,13 @@
 
         <img src="images/transbox.png"
         id="step1-trans1"
-        style="visibility: visible; position: absolute; top: 215px; left: 460px; width: 120px; height: 85px;" alt="transbox" onclick="step1MoveSheet1()">
+        style="visibility: hidden; position: absolute; top: 215px; left: 460px; width: 120px; height: 85px;" alt="transbox" onclick="step1MoveSheet1()">
 
         <!-- ARROW  -->
 
         <img src="images/arrow left.gif"
         id="step1-arr1"
-        style="visibility: visible; position: absolute; top: 230px; left: 580px; width: 50px; height: 40px;" alt="arr">
+        style="visibility: hidden; position: absolute; top: 230px; left: 580px; width: 50px; height: 40px;" alt="arr">
 
         <button style="position: absolute; visibility: hidden;" class="next" id="nextBtnStep3" onclick="nextToStep2()">Next</button>
       </div>
