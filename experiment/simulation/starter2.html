@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link
+    <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;family=Raleway&amp;display=swap"
       rel="stylesheet"
-    /> -->
+    />
     <link rel="icon" href="favicon.ico" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/main-content.css" />
     <link rel="stylesheet" href="css/starter.css">
     <script src="js/starter.js" defer></script>
-    <title>Experiment 1</title>
+    <title>Experiment 2</title>
   </head>
   <body>
     <header class="header">
@@ -36,6 +36,22 @@
         
         <!-- mainPage  -->
         <div class="content-container" id="mainPage" style="visibility: visible;">
+
+          <h3 class="instruction" style>Objective:</h3>
+
+          <p class="content" id="content">To incribe a regular pentagon in a given circle of diameter, say 150mm.</p>
+
+          <!-- <h3 class="instruction" style="top: 100px">Instruments used:</h3> -->
+
+          <img class="mainPageImg" id="mainPageImg" src="images/exp2Images/mainPageImg-step2.png" alt="Instruments"/>
+
+          <button style="position: absolute;" class="next" id="next-to-setup1" onclick="">Start</button>
+          
+        </div>
+        
+        <!-- setupPage  -->
+        <div class="content-container" id="setupPage" style="visibility: hidden;">
+          
             <h3 class="instruction" style>Step1:</h3>
 
             <p class="content" id="content">Place the sheet on the drawing board.</p>
@@ -71,7 +87,7 @@
 
             <img class="drafter2-starter" id="drafter2-starter" src="images/starterImages/DRAFTER1.png" alt="drafter2">
 
-            <button class="next" id="nextBtnOfStarter">Next</button>
+            <button class="next" id="nextBtnOfStarter" onclick="parent.location=`exp2.html`" >Next</button>
         </div>
 
     </div>

@@ -74,7 +74,16 @@ main{
 
 /* IMAGES  */
 
-.exp-index-img{
+.transbox{
+    position: absolute;
+    /* border: 1px solid red; */
+    left: 460px;
+    top: 215px;
+    width: 120px;
+    height: 85px;
+}
+
+.mainPageImg-step1{
     position: absolute;
     left: 180px;
     top: 200px;
@@ -87,11 +96,10 @@ main{
     top: 200px;
 }
 
-.transbox{
+.mainPageImg{
     position: absolute;
-    /* border: 1px solid red; */
-    left: 460px;
-    top: 215px;
-    width: 120px;
-    height: 85px;
+    width: 400px;
+    height: 400px;
+    left: 180px;
+    top: 150px;
 }

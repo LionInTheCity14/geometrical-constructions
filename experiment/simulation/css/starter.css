@@ -42,18 +42,22 @@
 
 #clip1-starter{
     animation: 2s 1 ease forwards moveClip1;
+    animation-play-state: paused;
 }
 
 #clip2-starter{
     animation: 2s 1 ease forwards moveClip2;
+    animation-play-state: paused;
 }
 
 #clip3-starter{
     animation: 2s 1 ease forwards moveClip3;
+    animation-play-state: paused;
 }
 
 #clip4-starter{
     animation: 2s 1 ease forwards moveClip4;
+    animation-play-state: paused;
 }
 
 .drafter2-starter{
@@ -62,6 +66,7 @@
     width: 150px;
     height: 150px;
     animation: 2s 1 ease forwards movingDrafter;
+    animation-play-state: paused;
 }
 
 @keyframes moveClip1{
