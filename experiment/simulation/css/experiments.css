@@ -16,6 +16,14 @@
     font-size: 20px;
 }
 
+#instructions1-step1{
+    visibility: visible;
+}
+
+#instruction2-step1{
+    visibility: hidden;
+}
+
 /* IMAGES  */
 
 .assembly{
@@ -37,13 +45,20 @@
 
 .exp-pencil{
     position: absolute;
-    visibility: visible;
-    transform: rotateX('45');
+    visibility: hidden;
+    width: 120px;
+    top: 225px;
+    left: 565px;
+    rotate: -60deg;
+}
+
+#gif1-step1{
+    visibility: hidden;
 }
 
 /* SELECTION  */
 
-.drop-menu{
+.dropMenu{
     position: absolute;
     width: 75px;
     padding: 5px;
@@ -51,7 +66,8 @@
     font-size: 14px;
 }
 
-#drop-menu1-step1{
+#dropMenu1-step1{
+    visibility: hidden;
     top: 170px;
     left: 430px;
 }
@@ -64,7 +80,6 @@
 /* BUTTONS  */
 .back-exp,.next-exp{
     position: absolute;
-    visibility: visible;
     padding: 10px 15px;
     color: white;
     background-color: rgb(20, 117, 228);
@@ -75,11 +90,13 @@
 }
 
 .back-exp{
+    visibility: hidden;
     left: 660px;
     top: 520px;
 }
 
 .next-exp{
+    visibility: hidden;
     left: 730px;
     top: 520px;
 }
@@ -88,11 +105,11 @@
 
 .exp-transboxes{
     position: absolute;
-    visibility: visible;
     /* border: 1px solid red; */
 }
 
-#dropMenu-trans1-step1{
+#trans1-step1{
+    visibility: visible;
     top: 120px;
     left: 430px;
     width: 65px;
@@ -100,3 +117,14 @@
 }
 
 /* ARROWS  */
+
+.exp-arrows{
+    position: absolute;
+    width: 50px;
+}
+
+#arr1-step1{
+    visibility: visible;
+    top: 170px;
+    left: 440px;
+}
